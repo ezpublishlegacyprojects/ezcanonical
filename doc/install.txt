@@ -1,0 +1,37 @@
+
+
+1. Copy files to extension directory
+---------------------------------------------------
+Copy the extension to your /extension directory:
+
+drwxr-xr-x   6 velmu  staff   204 Jun 20 12:57 ezcanonical
+drwxr-xr-x  15 velmu  staff   510 Jun  3 21:50 ezodf
+drwxr-xr-x  16 velmu  staff   544 Jun  3 21:50 ezoe
+drwxrwxrwx   9 velmu  staff   306 Jun 20 12:19 ezwebin
+
+
+2. Activate the extension
+---------------------------------------------------
+Activate the ezcanonical extension from administration interface
+or via editing settings/siteaccess/yoursite/site.ini.append.php:
+
+[ExtensionSettings]
+ActiveExtensions[]=ezcanonical
+
+
+3. Include template in pagelayout
+---------------------------------------------------
+
+Include the template snippet in your pagelayout.tpl. The include
+must be done withing the head-section:
+
+{include uri="design:ezcanonical.tpl"}
+</head>
+
+
+4. Clear all caches
+---------------------------------------------------
+
+Use either the admin interface cache clear button or the CLI script:
+
+php bin/php/ezcache.php --clear-all
